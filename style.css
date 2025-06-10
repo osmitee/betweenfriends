@@ -24,7 +24,7 @@ body {
   width: 65%;
   height: 100%;
   margin: auto;
-  border: #dc4abd 1px solid;
+  /* border: #dc4abd 1px solid; */
   overflow: scroll;
 }
 
@@ -65,9 +65,6 @@ a:active,
 :visited,
 :link {
   color: #dc4abd;
-}
-
-button {
 }
 
 .cyan-txt {
@@ -147,4 +144,25 @@ button {
 
 .tees-marquee-wrapper:hover .tees {
   animation-play-state: paused;
+}
+
+button {
+  background-color: #242424; /* Pinkish background */
+  color: #d432b8; /* White text */
+  border: solid 2px #323232; /* No border */
+  padding: 10px 20px; /* Some padding */
+  font-size: 1rem; /* Match your pink-txt font size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #e7a6ee; /* Lighter pink on hover */
+  color: black; /* Text turns black for contrast */
+}
+
+a {
+  text-decoration: none;
 }

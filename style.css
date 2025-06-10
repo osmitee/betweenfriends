@@ -1,0 +1,150 @@
+body {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  font-family: sans-serif;
+  padding-bottom: 10%;
+  overflow: hidden;
+}
+
+.header {
+  display: block;
+  width: 30%;
+  margin: auto;
+  margin-top: -2%;
+}
+
+.parent {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  width: 65%;
+  height: 100%;
+  margin: auto;
+  border: #dc4abd 1px solid;
+  overflow: scroll;
+}
+
+.div1 {
+  grid-area: 1 / 5 / 6 / 6;
+  display: grid;
+  grid-template-rows: max-content;
+  row-gap: 5%;
+  background-color: black;
+}
+.div2 {
+  grid-area: 1 / 1 / 4 / 5;
+  /* z-index: -1; */
+}
+.div3 {
+  grid-area: 4 / 1 / 6 / 5;
+}
+
+.profile {
+  width: 100%;
+}
+
+.title-txt {
+  color: #e7a6ee;
+  font-size: 1.25rem;
+}
+
+.lightpink-txt {
+  color: #e7a6ee;
+}
+
+.pink-txt {
+  color: #dc4abd;
+  font-size: 1rem;
+}
+
+a:active,
+:visited,
+:link {
+  color: #dc4abd;
+}
+
+button {
+}
+
+.cyan-txt {
+  color: #db00e6;
+}
+
+.green-txt {
+  color: #31e02b;
+  background-color: black;
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  border: #35f1f8 solid 1px;
+  background-color: #35f1f8;
+  position: relative;
+  text-transform: uppercase;
+  font-family: serif;
+  font-size: 1.5rem;
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 15s linear infinite;
+}
+
+.marquee-text {
+  display: flex;
+  white-space: nowrap;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-wrapper:hover .marquee {
+  animation-play-state: paused;
+}
+
+.tees-marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  cursor: pointer; /* optional */
+}
+
+.tees {
+  display: flex;
+  width: max-content;
+  animation: scroll-tees 10s linear infinite;
+  margin: 2%;
+  pointer-events: none;
+  gap: 1vw;
+}
+
+.tees img {
+  width: 20vw;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+@keyframes scroll-tees {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.tees-marquee-wrapper:hover .tees {
+  animation-play-state: paused;
+}

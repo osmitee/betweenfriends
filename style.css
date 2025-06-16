@@ -114,7 +114,7 @@ a:active,
   overflow: hidden;
   width: 100%;
   position: relative;
-  cursor: pointer; /* optional */
+  cursor: pointer;
 }
 
 .tees {
@@ -146,20 +146,20 @@ a:active,
 }
 
 button {
-  background-color: #242424; /* Pinkish background */
-  color: #d432b8; /* White text */
-  border: solid 2px #323232; /* No border */
-  padding: 10px 20px; /* Some padding */
-  font-size: 1rem; /* Match your pink-txt font size */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
+  background-color: #242424;
+  color: #d432b8;
+  border: solid 2px #323232;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
   width: 100%;
 }
 
 button:hover {
-  background-color: #e7a6ee; /* Lighter pink on hover */
-  color: black; /* Text turns black for contrast */
+  background-color: #e7a6ee;
+  color: black;
 }
 
 a {
@@ -176,4 +176,101 @@ a {
 
 .sticker {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .parent {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 20px;
+  }
+
+  /* Reorder for mobile: tees first, profile second, sticker last */
+  .div2 {
+    order: 1; /* Tees marquee */
+    width: 100%;
+  }
+
+  .div1 {
+    order: 2; /* Profile + text + buttons */
+    width: 100%;
+  }
+
+  .div3 {
+    order: 3; /* Sticker image */
+    width: 100%;
+  }
+
+  .title-txt {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .pink-txt,
+  .lightpink-txt {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .marquee-wrapper,
+  .tees-marquee-wrapper {
+    font-size: 1rem;
+    overflow-x: auto;
+  }
+
+  .tees img {
+    width: 50vw;
+  }
+
+  .stickers img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .parent {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+
+  .tees-marquee-wrapper,
+  .marquee-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .tees {
+    margin: 0;
+  }
+
+  .profile {
+    width: 50%;
+  }
+
+  button {
+    width: auto;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    display: block;
+    margin: auto;
+  }
 }
